@@ -1,5 +1,8 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def index(request):
-  return HttpResponse("Hello, World!!!")
+  context = {
+    'name': 'Shu',
+  }
+  return render(request, 'myapp/index.html', context)
