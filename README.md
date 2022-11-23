@@ -5,9 +5,9 @@
 <h1 align="center">Django Lessons</h1>
 
 <div align="center">
-  <a href="">
-    <img src="" height="35">
-  </a>&nbsp;
+  <a href="https://www.djangoproject.com/" target="_blank">
+    <img src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-icon.svg" alt="django" height="35">
+  </a>
 </div>
 
 ## :computer: URL
@@ -21,6 +21,7 @@ Django learning repository.
 ## :hammer: Requirement
 
 - macOS
+- Django
 
 ## :pushpin: Usage
 
