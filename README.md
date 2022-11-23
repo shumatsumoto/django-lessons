@@ -16,7 +16,7 @@
 
 ## :pencil2: Overview
 
-...
+Django learning repository
 
 ## :hammer: Requirement
 
@@ -32,7 +32,7 @@
 
 ## :green_book: Reference
 
-...
+- [初心者でも心配無用　圧倒的わかりやすさで、さあ、Djangoをはじめよう](https://www.udemy.com/course/django-f/)
 
 ## :hatching_chick: Author
 
