@@ -16,7 +16,7 @@
 
 ## :pencil2: Overview
 
-Django learning repository
+Django learning repository.
 
 ## :hammer: Requirement
 
