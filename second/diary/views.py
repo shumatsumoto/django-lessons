@@ -1,9 +1,13 @@
 from django.shortcuts import render, redirect
 from .forms import DayCreateForm
+from .models import Day
 
 
 def index(request):
-  return render(request, 'diary/day_list.html')
+  context = {
+    'day_list': Day.objects.all()
+  }
+  return render(request, 'diary/day_list.html', context)
 
 
 def add(request):
