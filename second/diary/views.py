@@ -26,20 +26,5 @@ class DeleteView(generic.DeleteView):
   success_url = reverse_lazy('diary:index')
 
 
-# def delete(request, pk):
-#   day = get_object_or_404(Day, pk=pk)
-#   if request.method == 'POST':
-#     day.delete()
-#     return redirect('diary:index')
-#   context = {
-#     'day': day
-#   }
-#   return render(request, 'diary/day_confirm_delete.html', context)
-
-
-def detail(request, pk):
-  day = get_object_or_404(Day, pk=pk)
-  context = {
-    'day': day
-  }
-  return render(request, 'diary/day_detail.html', context)
+class DetailView(generic.DetailView):
+  model = Day
