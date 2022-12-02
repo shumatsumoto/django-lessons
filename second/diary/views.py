@@ -15,16 +15,10 @@ class AddView(generic.CreateView):
   success_url = reverse_lazy('diary:index')
 
 
-def update(request, pk):
-  day = get_object_or_404(Day, pk=pk)
-  form = DayCreateForm(request.POST or None, instance=day)
-  if request.method == 'POST' and form.is_valid():
-    form.save()
-    return redirect('diary:index')
-  context = {
-    'form': form
-  }
-  return render(request, 'diary/day_form.html', context)
+class UpdateView(generic.UpdateView):
+  model = Day
+  form_class = DayCreateForm
+  success_url = reverse_lazy('diary:index')
 
 
 def delete(request, pk):
