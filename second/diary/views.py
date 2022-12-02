@@ -21,15 +21,20 @@ class UpdateView(generic.UpdateView):
   success_url = reverse_lazy('diary:index')
 
 
-def delete(request, pk):
-  day = get_object_or_404(Day, pk=pk)
-  if request.method == 'POST':
-    day.delete()
-    return redirect('diary:index')
-  context = {
-    'day': day
-  }
-  return render(request, 'diary/day_confirm_delete.html', context)
+class DeleteView(generic.DeleteView):
+  model = Day
+  success_url = reverse_lazy('diary:index')
+
+
+# def delete(request, pk):
+#   day = get_object_or_404(Day, pk=pk)
+#   if request.method == 'POST':
+#     day.delete()
+#     return redirect('diary:index')
+#   context = {
+#     'day': day
+#   }
+#   return render(request, 'diary/day_confirm_delete.html', context)
 
 
 def detail(request, pk):
