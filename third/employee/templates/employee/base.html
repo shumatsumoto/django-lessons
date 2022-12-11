@@ -11,6 +11,26 @@
     <title>社員管理システム</title>
   </head>
   <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">社員管理システム</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="{% url 'employee:index' %}">一覧 </a>
+            </li>
+            {% if user.is_superuser %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'admin:employee_employee_add' %}">社員追加</a>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+      </nav>
+
       <div class="container">
           {% block content %}
           {% endblock %}
