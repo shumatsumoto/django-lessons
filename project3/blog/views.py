@@ -1,5 +1,8 @@
 from django.views import generic
+from .models import Post
 
 
-class IndexView(generic.TemplateView):
-    template_name = 'blog/post_list.html'
+class IndexView(generic.ListView):
+    model = Post
+    def get_queryset(self):
+        return Post.objects.order_by('-created_at')
