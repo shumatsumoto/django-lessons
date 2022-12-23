@@ -26,3 +26,7 @@ class CategoryView(generic.ListView):
         category_pk = self.kwargs['pk']
         queryset = Post.objects.order_by('-created_at').filter(category__pk=category_pk)
         return queryset
+
+
+class DetailView(generic.DetailView):
+    model = Post
